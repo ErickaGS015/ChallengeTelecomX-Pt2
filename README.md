@@ -1,28 +1,51 @@
-# ChallengeTelecom X
-# Análisis de Evasión de Clientes (Churn) - TelecomX
+# ChallengeTelecom X - PT2
 
-## Introducción
-Este proyecto forma parte del Challenge de Data Science LATAM. El objetivo es analizar el comportamiento de los clientes de TelecomX y comprender los factores que influyen en la evasión (Churn). La evasión de clientes es un problema crítico para las empresas de telecomunicaciones, ya que impacta directamente en los ingresos y la sostenibilidad del negocio.
+## Descripción del proyecto
+Desarrollar modelos predictivos capaces de prever qué clientes tienen mayor probabilidad de cancelar sus servicios.
+La empresa quiere anticiparse al problema de la cancelación, y te corresponde a ti construir un pipeline robusto para esta etapa inicial de modelado.
+Se entrenaron los siguientes modelos:
+
+
+1. **Árbol de decisión (Decision Tree Classifier)**  
+   - Profundidad máxima: 3  
+   - Balanceo de clases aplicado  
+   - Fácil de interpretar y visualizar reglas de cancelación  
+
+2. **Random Forest Classifier**  
+   - 100 árboles  
+   - Balanceo de clases aplicado  
+   - Mayor precisión y robustez frente a interacciones complejas  
+
+---
 
 ## Dataset
-El dataset utilizado proviene del archivo JSON:
-[TelecomX_Data.json](https://raw.githubusercontent.com/ingridcristh/challenge2-data-science-LATAM/refs/heads/main/TelecomX_Data.json)
+- Columnas principales:
 
-Contiene información sobre:
-- Datos del cliente (`customerID`, `gender`, `SeniorCitizen`, etc.)
-- Servicios contratados (`PhoneService`, `InternetService`, `StreamingTV`, etc.)
-- Información de cuenta (`Contract`, `PaymentMethod`, `MonthlyCharges`, `TotalCharges`, `Tenure`)
-- Variable objetivo: **`Churn`** (Sí/No)
+| Columna              | 
+|----------------------|
+| customerid           | 
+| churn                | 
+| gender               |
+| seniorcitizen        |
+| partner              |
+| dependents           |
+| tenure               |
+| phoneservice         |
+| multiplelines        | 
+| internetservice      | 
+| onlinesecurity       | 
+| onlinebackup         | 
+| deviceprotection     | 
+| techsupport          | 
+| streamingtv          | 
+| streamingmovies      | 
+| contract             | 
+| paperlessbilling     | 
+| paymentmethod        | 
+| charges_monthly      | 
+| charges_total        | 
+------------------------
 
-## Limpieza y Tratamiento de Datos
-- Normalización de estructuras anidadas (customer, phone, internet, account).
-- Verificación y corrección de valores ausentes, duplicados y errores de formato.
-- Homogeneización de categorías mediante manipulación de strings.
-
-## Análisis Exploratorio de Datos
-- **Descriptivo:** cálculo de métricas como media, mediana y desviación estándar.
-- **Distribución de Churn:** visualización de la proporción de clientes que permanecieron vs. los que cancelaron.
-- **Variables categóricas:** análisis de género, tipo de contrato y método de pago en relación con Churn.
 
 ## Tecnologías Utilizadas
 - Python 3
