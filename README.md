@@ -33,3 +33,4 @@ Contiene información sobre:
 
 ---
 Este repositorio contiene el notebook con todo el flujo de trabajo: importación, limpieza, análisis exploratorio, conclusiones y recomendaciones estratégicas.
+# ChallengeTelecomX-Pt2
